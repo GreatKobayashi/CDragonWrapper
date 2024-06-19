@@ -1,0 +1,5 @@
+.vs
+src/CDragonWrapper/obj/
+src/CDragonWrapper/bin/
+src/CDragonWrapper.Test/obj/
+src/CDragonWrapper.Test/bin/
