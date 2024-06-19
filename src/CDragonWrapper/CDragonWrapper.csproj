@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>Kobayashi Ryu</Authors>
+    <PackageTags>LoL, Riot, LeagueOfLegends</PackageTags>
+    <Description>Easily get CDragon's data.</Description>
+    <AssemblyVersion>1.5.0</AssemblyVersion>
+    <Version>$(VersionPrefix)1.5.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RiotApiWrapper" Version="1.6.1" />
+  </ItemGroup>
+
+</Project>
