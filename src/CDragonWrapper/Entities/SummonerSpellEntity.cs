@@ -1,22 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CDragonWrapper.Logics;
+using System.Text.Json.Serialization;
 
 namespace CDragonWrapper.Entities
 {
     public class SummonerSpellEntity
     {
-        public SummonerSpellEntity(uint id, string name, string icon)
+        private string? _iconPath;
+
+        public SummonerSpellEntity(long id, string name, string description, int summonerLevel, int cooldown, List<string> gameModes, string iconPath)
         {
             Id = id;
             Name = name;
-            Icon = icon;
+            Description = description;
+            SummonerLevel = summonerLevel;
+            Cooldown = cooldown;
+            GameModes = gameModes;
+            IconPath = iconPath;
         }
 
-        public uint Id { get; private set; }
+        public long Id { get; private set; }
         public string Name { get; private set; }
-        internal string Icon { get; private set; }
+        public string Description { get; private set; }
+        public int SummonerLevel { get; private set; }
+        public int Cooldown { get; private set; }
+        public List<string> GameModes { get; private set; }
+        public string? IconPath { get => _iconPath; private set => _iconPath = PathManager.GetMappedPath(value); }
+
+
+        [JsonIgnore]
+        public string? IconUrl { get => PathManager.GetCDragonUrl(_iconPath); }
     }
 }

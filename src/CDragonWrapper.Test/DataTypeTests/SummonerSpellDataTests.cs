@@ -1,12 +1,14 @@
+using CDragonWrapper.DataTypes;
+
 namespace CDragonWrapper.Test
 {
     [TestClass]
-    public class ItemJsonTests
+    public class SummonerSpellTests
     {
         [TestMethod]
         public void TestGetAllIds()
         {
-            var test = CDragon.ItemJson.GetAllEntities();
+            var test = new SummonerSpellList();
         }
     }
 }
